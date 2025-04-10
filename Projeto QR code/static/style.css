@@ -1,0 +1,90 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    
+    
+    background: radial-gradient(circle at center, #320f6b, #16012e);
+}
+
+
+input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.button {
+    background: var(--color-back);
+    border-radius: 0.5em;
+    box-shadow:
+      inset 0px -6px 18px -6px rgba(77, 3, 175, 0),
+      inset rgb(111, 0, 255) -1px -1px 6px 0px,
+      inset 12px 0px 12px -6px rgba(77, 3, 175, 0),
+      inset -12px 0px 12px -6px rgba(77, 3, 175, 0),
+      rgb(111, 0, 255) -1px -1px 6px 0px;
+    border: solid 2px #8400ff;
+    cursor: pointer;
+    font-size: 14px; 
+    padding: 0.5em 1.2em; 
+    outline: none;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+  
+  .button:hover {
+    box-shadow:
+      inset 0px -6px 18px -6px rgb(30, 1, 63),
+      inset 0px 6px 18px -6px rgb(30, 1, 63),
+      inset 12px 0px 12px -6px rgb(30, 1, 63),
+      inset -12px 0px 12px -6px rgb(30, 1, 63),
+      -1px -1px 6px 0px rgb(61, 2, 109);
+  }
+  
+  .button:active {
+    box-shadow:
+      inset 0px -12px 12px -6px rgb(30, 1, 63),
+      inset 0px 12px 12px -6px rgb(30, 1, 63),
+      inset 12px 0px 12px -6px rgb(30, 1, 63),
+      inset -12px 0px 12px -6px rgb(30, 1, 63),
+      -1px -1px 6px 0px rgb(42, 0, 82);
+  }
+  
+  
+    .text {
+        color: white;
+        font-weight: 700;
+        margin: auto;
+        transition: all 0.3s;
+        width: fit-content;
+    }
+    
+
+  
+  
+  img {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10%;
+
+    
+    box-shadow: 0 0 15px 5px rgba(132, 0, 255, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+}
+h1{
+    color: white
+}
+
+p{
+    color: white
+
+}
+
+h2{
+    color: white
+}
