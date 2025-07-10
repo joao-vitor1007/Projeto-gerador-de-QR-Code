@@ -20,7 +20,7 @@ input {
     background: var(--color-back);
     border-radius: 0.5em;
     box-shadow:
-      inset 0px -6px 18px -6px rgba(77, 3, 175, 0),
+      inset 0px -6px 18px -6px rgba(255, 255, 255, 0),
       inset rgb(111, 0, 255) -1px -1px 6px 0px,
       inset 12px 0px 12px -6px rgba(77, 3, 175, 0),
       inset -12px 0px 12px -6px rgba(77, 3, 175, 0),
@@ -32,6 +32,7 @@ input {
     outline: none;
     transition: all 0.3s;
     user-select: none;
+    color: white;
 }
 
   
