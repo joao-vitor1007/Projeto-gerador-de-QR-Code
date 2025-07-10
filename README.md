@@ -1,4 +1,4 @@
-# 🔳 Gerador de QR Code com Flask
+# Gerador de QR Code com Flask
 
 Olá! Eu sou o João Vitor, e este é um projeto simples, porém bem estilizado, de **gerador de QR Code** feito com **Python (Flask)**. Nele, o usuário pode inserir um link e obter automaticamente a imagem de um QR Code correspondente.
 
@@ -18,6 +18,8 @@ Além da funcionalidade, me preocupei também com o visual da aplicação: usei 
 ---
 
 ## 💻 Como executar o projeto
+
+
 
 ### ✅ Pré-requisitos
 
@@ -71,7 +73,7 @@ qr-code-generator/
 ├── static/
 │   └── style.css        # Estilos personalizados
 ├── README.md            # Este arquivo
-🎨 Funcionalidades e Estilo
+-- Funcionalidades e Estilo --
 Entrada de link com botão customizado
 
 Geração dinâmica de QR Code
@@ -87,6 +89,8 @@ Animação de entrada suave para o QR gerado
 Partículas animadas no fundo (via particles.js)
 
 📷 Preview
+
+<img width="1872" height="875" alt="Projeto qr code 1" src="https://github.com/user-attachments/assets/02e0e1f6-1498-4481-a4b4-02a205120e18" /><img width="1879" height="876" alt="Projeto QR code 2" src="https://github.com/user-attachments/assets/970ebf4a-3f2c-4bc9-8cdc-2510b2ffdffb" />
 
 
 
