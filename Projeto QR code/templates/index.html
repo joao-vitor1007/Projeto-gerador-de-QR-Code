@@ -4,21 +4,109 @@
     <meta charset="UTF-8">
     <title>Gerador de QR Code</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
+    <div id="particles-js"></div>
+
     <h1>Gerador de QR Code</h1>
     <p>Digite o link que você deseja transformar em QR Code:</p>
 
     <form method="POST">
         <input type="text" name="link" placeholder="https://exemplo.com" required>
-        <button class="button">
-            <div class="text">Gerar QR Code</div>
-          </button>
+        <button class="button" type="submit">Gerar QR Code</button>
     </form>
 
     {% if qr_image %}
-        <h2>Seu QR Code:</h2>
-        <img src="{{ url_for('get_qrcode', filename=qr_image) }}" alt="QR Code">
+        <h2>QR Code Gerado:</h2>
+        <img id="qrcode-img" src="{{ url_for('get_qrcode', filename=qr_image) }}">
     {% endif %}
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.opacity = 0;
+            document.body.style.transition = "opacity 1s ease-in-out";
+            setTimeout(() => {
+                document.body.style.opacity = 1;
+            }, 100);
+        });
+
+        
+        const button = document.querySelector(".button");
+        if (button) {
+            button.addEventListener("click", () => {
+                button.style.transform = "scale(0.95)";
+                setTimeout(() => {
+                    button.style.transform = "scale(1)";
+                }, 150);
+            });
+        }
+
+        
+        const qrcodeImg = document.getElementById("qrcode-img");
+        if (qrcodeImg) {
+            qrcodeImg.style.opacity = 0;
+            qrcodeImg.style.transform = "scale(0.8)";
+            setTimeout(() => {
+                qrcodeImg.style.transition = "all 0.5s ease-out";
+                qrcodeImg.style.opacity = 1;
+                qrcodeImg.style.transform = "scale(1)";
+            }, 100);
+        }
+
+        
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 60 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.3,
+                    "random": true
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
